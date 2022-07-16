@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <title>Countdown timer using HTML and JavaScript</title>
+</head>
+<body>
+       
+
+<body style="background-color:blueviolet;">
+  <img src="UATspaceLogo-2.jpg" alt="opps" srcset="">
+    <h1>
+        UAT Space Program
+    </h1>
+    
+    <h2>Countdown</h2>
+
+    
+    <body>
+        <!--the progress bar-->
+        <progress value="0" max="10" id="pbar" ></progress><p id="counting">10</p>
+        <!--This button is to start the fun-->
+        <button id="start" onclick="start_countdown()">Start Count Down</button>
+        <!--the code that makes the countdown-->
+        <script type="text/javascript">
+          function start_countdown(){
+          var reverse_counter = 10;
+      var downloadTimer = setInterval(function(){
+        document.getElementById("pbar").value = 10 - --reverse_counter;
+        //what stops the fun and Blast off!!
+        if(reverse_counter <= -1)
+          clearInterval(downloadTimer);
+          //a pop up for blast off
+        if(reverse_counter <= -1)
+           alert("Blast Off!!!!")
+        
+        document.getElementById("counting").innerHTML= reverse_counter;
+        
+      
+      
+      },1000);
+      }
+      
+     
+      
+          
+        </script>
+      
+      </body>
+
+</body>
+</html>
